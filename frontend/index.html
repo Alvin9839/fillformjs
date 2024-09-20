@@ -1,0 +1,64 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HKT PDF Filler</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      h1 {
+        color: #333;
+      }
+      input[type="file"] {
+        margin: 20px 0;
+      }
+      input[type="submit"] {
+        background-color: #0052bd;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #7cb4fc;
+      }
+      img.logo {
+        max-width: 100px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>HKT MS PDF Generator</h1>
+      <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".xlsx" />
+        <select name="form_type">
+          <option value="HKT_Service_Application_Form">
+            HKT Service Application Form
+          </option>
+          <option value="HKT_POS_Moblie_Form">HKT POS Mobile Form</option>
+          <option value="HKTMS_Form">HKTMS Form</option>
+        </select>
+        <input type="submit" value="Upload" />
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
